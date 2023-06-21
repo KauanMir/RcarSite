@@ -76,6 +76,26 @@
             </div>
           </header>
         </div>
+        
+        <style>
+        @keyframes slideIn {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .container h1,
+        .container p {
+          animation: slideIn 1s ease-in-out;
+          animation-fill-mode: both;
+          opacity: 0;
+        }
+        </style>        
 
           
             <!--
