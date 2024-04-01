@@ -715,65 +715,53 @@
           <div class="container">
             <div class="rq-download-app-section">
               <div class="row">
-                  <div class="col-md-6">
+                <div class="col-md-6">
                   <div id="map" style="height: 400px;"></div>
                 </div>
-                
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7hIwiwn8eYFdhmAF3PIJknIyCg5eqx_k"></script>
-                <script>
-                  function initMap() {
-                    const location = { lat: -16.030823, lng: -48.060219 };
-                    const map = new google.maps.Map(document.getElementById("map"), {
-                      center: location,
-                      zoom: 15,
-                    });
-                    
-                    const marker = new google.maps.Marker({
-                      position: location,
-                      map: map,
-                    });
-                
-                    const infowindow = new google.maps.InfoWindow({
-                      content: '<strong>Rcar Aluguel de carros</strong><br>Q QUADRA 36 COMERCIO LOCAL A/E GAMA - SETOR LESTE, Brasília - DF',
-                    });
-                
-                    marker.addListener("click", () => {
-                      infowindow.open(map, marker);
-                    });
-                  }
-                
-                  // Inicializa o mapa quando a página é carregada
-                   window.onload = initMap; 
-                </script>
-
-                
-                <div class="col-md-6" container>
-                  <div class="app-text-section text-center" >
-                    <h5 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">LOCALIZAÇÃO</h5>
-                    <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">GAMA-DF</h1>
-                    <div style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); text-align: center; padding-left: 0;">
-                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">
-                        &#10003;
-                      </span> 
-                      <span style="color: white;">Encontre o carro que deseja alugar.</span>
-                      <br>
-                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">
-                        &#10003;
-                      </span> 
-                      <span style="color: white;">Nos chame no WhatsApp e reserve.</span>
-                      <br>
-                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">
-                        &#10003;
-                      </span> 
+                <div class="col-md-6">
+                  <div class="app-text-section">
+                    <h5 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); text-align: center;">LOCALIZAÇÃO</h5>
+                    <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); text-align: center;">GAMA-DF</h1>
+                    <div style="text-align: center; padding-left: 0;">
+                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">&#10003;</span>
+                      <span style="color: white;">Encontre o carro que deseja alugar.</span><br>
+                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">&#10003;</span>
+                      <span style="color: white;">Nos chame no WhatsApp e reserve.</span><br>
+                      <span style="display: inline-block; vertical-align: middle; margin-right: 5px; font-size: 18px; color: green;">&#10003;</span>
                       <span style="color: white;">Pegue-o e boa viagem!</span>
                     </div>
                   </div>
                 </div>
-              
               </div>
             </div>
           </div>
         </div>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7hIwiwn8eYFdhmAF3PIJknIyCg5eqx_k"></script>
+        <script>
+          function initMap() {
+            const location = { lat: -16.030823, lng: -48.060219 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+              center: location,
+              zoom: 15,
+            });
+        
+            const marker = new google.maps.Marker({
+              position: location,
+              map: map,
+            });
+        
+            const infowindow = new google.maps.InfoWindow({
+              content: '<strong>Rcar Aluguel de carros</strong><br>Q QUADRA 36 COMERCIO LOCAL A/E GAMA - SETOR LESTE, Brasília - DF',
+            });
+        
+            marker.addListener("click", () => {
+              infowindow.open(map, marker);
+            });
+          }
+        
+          window.onload = initMap;
+        </script>
         
         
         <!-- /.rq-content-block -->
